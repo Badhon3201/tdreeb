@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ryx.tdreeb.ui.fragments.trainerfragment.home.TrainerHomeSessionItemViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{()-> viewModel.setOnItemClick()}"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_upcoming_layout"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_weight="2"
+            android:background="@drawable/white_bg_with_border">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/student_profile_image"
+                imageFromUrl="@{viewModel.student_image}"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/_5sdp"
+                app:civ_border_color="@color/border_color_of_toolbar_image"
+                app:civ_border_width="@dimen/_2sdp" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_toStartOf="@+id/tv_duration"
+                android:layout_toEndOf="@+id/student_profile_image"
+                android:text="@{viewModel.student_name}"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_subject"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_toStartOf="@+id/tv_time"
+                android:layout_toEndOf="@+id/student_profile_image"
+                android:text="@{viewModel.student_subject}"
+                android:textAllCaps="false"
+                android:textColor="@color/textcolor_upcoming_session_subject"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/location_icon"
+                android:layout_width="@dimen/_7sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_below="@+id/tv_subject"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/student_profile_image"
+                android:scaleType="fitXY"
+                android:src="@drawable/location" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_subject"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_toStartOf="@+id/tv_time"
+                android:layout_toEndOf="@+id/location_icon"
+                android:text="@{viewModel.teacher_address}"
+                android:textAllCaps="false"
+                android:textColor="@color/textcolor_upcoming_session_subject"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="normal" />
+
+
+            <TextView
+                android:id="@+id/tv_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/upcoming_time_bg"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="@{viewModel.remain_time}"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                android:textStyle="normal" />
+
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_duration"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_13sdp"
+                android:text="@{viewModel.time}"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/time_icon"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_below="@+id/tv_duration"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_toStartOf="@+id/tv_time"
+                android:scaleType="fitXY"
+                android:src="@drawable/time" />
+
+        </RelativeLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/guardian_profile_image"
+            imageFromUrl="@{viewModel.teacher_image}"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_gravity="top"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:civ_border_color="@color/border_color_of_toolbar_image"
+            app:civ_border_width="@dimen/_4sdp" />
+
+    </LinearLayout>
+
+</layout>

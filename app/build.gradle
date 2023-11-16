@@ -1,0 +1,189 @@
+plugins {
+    id 'com.android.application'
+}
+apply plugin: 'kotlin-android'
+apply plugin: "androidx.navigation.safeargs"
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.ryx.tdreeb"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+        setProperty("archivesBaseName", "tdreeb" + "-v" + getDate() + "_" + versionCode)
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", "\"http://tdreeb.r-y-x.com/api/v1\"")
+            buildConfigField("String", "IMAGE_URL", "\"http://tdreeb.r-y-x.com\"")
+            buildConfigField("String", "GOOGLE_AUTOCOMPLETE_URL", "\"https://maps.googleapis.com/maps/api/place/autocomplete/json?\"")
+            buildConfigField("String", "GOOGLE_PLACE_URL", "\"https://maps.googleapis.com/maps/api/\"")
+            buildConfigField("String", "API_KEY", "\"ABCXYZ123TEST\"")
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "BASE_URL", "\"http://tdreeb.r-y-x.com/api/v1\"")
+            buildConfigField("String", "IMAGE_URL", "\"http://tdreeb.r-y-x.com\"")
+            buildConfigField("String", "GOOGLE_AUTOCOMPLETE_URL", "\"https://maps.googleapis.com/maps/api/place/autocomplete/json?\"")
+            buildConfigField("String", "GOOGLE_PLACE_URL", "\"https://maps.googleapis.com/maps/api/\"")
+            buildConfigField("String", "API_KEY", "\"ABCXYZ123TEST\"")
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "androidx.appcompat:appcompat:$rootProject.supportLibraryVersion"
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    implementation "androidx.cardview:cardview:$rootProject.cardViewVersion"
+    implementation "androidx.vectordrawable:vectordrawable:$rootProject.vectorDrawableVersion"
+    implementation "androidx.vectordrawable:vectordrawable-animated:$rootProject.animatedVectorDrawableVersion"
+
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    /*Doc picker */
+    implementation 'com.nbsp:materialfilepicker:1.9.1'
+//    implementation 'com.droidninja:filepicker:2.2.5'
+
+
+    // network
+    implementation "com.amitshekhar.android:rx2-android-networking:$rootProject.rx2FastAndroidNetworking"
+
+    // database
+    implementation "androidx.room:room-rxjava2:$rootProject.roomDatabaseVersion"
+    annotationProcessor "androidx.room:room-compiler:$rootProject.roomDatabaseVersion"
+
+    // font
+//    implementation "uk.co.chrisjenx:calligraphy:$rootProject.calligraphyVersion"
+
+    // image
+    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+
+    // parser
+    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+    // debug database
+    debugImplementation "com.amitshekhar.android:debug-db:$rootProject.debugDBVersion"
+
+    // dependency injection
+    implementation "com.google.dagger:dagger:$rootProject.dagger2Version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+
+    // reactive
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjava2Version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+
+    // swipe view
+    implementation "com.mindorks:placeholderview:$rootProject.placeholderviewVersion"
+
+    // logger
+    implementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
+
+    // dependencies for local unit tests
+    testImplementation "junit:junit:$rootProject.ext.junitVersion"
+    testImplementation "org.mockito:mockito-core:$rootProject.mockitoVersion"
+    testAnnotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+
+    // UI Testing
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$rootProject.espressoVersion"
+    androidTestImplementation "org.mockito:mockito-core:$rootProject.mockitoVersion"
+    androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+
+    // view model
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycleVersion"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$rootProject.lifecycleVersion"
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.2.0"
+
+    implementation 'com.github.aabhasr1:OtpView:v1.1.2'
+    implementation 'com.github.GoodieBag:Pinview:v1.4'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    //Time Picker
+    implementation 'com.github.drawers:SpinnerDatePicker:2.0.1'
+    //premission library
+    implementation 'com.karumi:dexter:6.1.2'
+
+//  Firebase
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+
+//   PDF
+    implementation 'es.voghdev.pdfviewpager:library:1.1.2'
+    //OTP View
+    implementation 'com.chaos.view:pinview:1.4.4'
+    //Progress Bar
+    implementation 'com.wang.avi:library:2.1.3'
+//    implementation 'com.github.vinaygopinath:StepView:2.0.1'
+//    implementation 'com.github.baoyachi:StepView:1.9'
+
+//  Map
+    implementation 'com.google.android.libraries.maps:maps:3.1.0-beta'
+    // If you are using Places, add all of the dependencies below
+//    implementation name:'places-maps-sdk-3.1.0-beta', ext:'aar'
+    implementation 'com.google.android.gms:play-services-gcm:17.0.0'
+    implementation 'com.google.auto.value:auto-value-annotations:1.6.2'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+
+    //otp textfield
+    implementation ('com.alimuzaffar.lib:pinentryedittext:2.0.6') {
+        // Exclude is only needed if you already have
+        // androidx.appcompat as a dependency in your app.
+        exclude group: 'androidx.appcompat', module: 'appcompat'
+    }
+
+    //bottom navigation
+    implementation 'androidx.navigation:navigation-fragment:2.3.3'
+    implementation 'androidx.navigation:navigation-ui:2.3.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    //circular imageview
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation project(path: ':library')
+}
+
+def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('dd_MM_yyyy')
+    return formattedDate
+}

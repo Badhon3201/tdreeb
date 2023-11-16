@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ryx.tdreeb.ui.fragments.trainerfragment.mypayment.TrainerMyPaymentViewModel" />
+    </data>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:background="@color/upcoming_session_bg"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_color">
+
+            <include
+                android:id="@+id/custom_toolbar"
+                layout="@layout/custom_toolbar_for_my_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true" />
+
+            <RelativeLayout
+                android:id="@+id/current_plan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/custom_toolbar"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/trainer_chat_layout_bg">
+
+                <TextView
+                    android:id="@+id/tv_data_remaining"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/_100sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="20 GB Remaining"
+                    android:textColor="@color/sky_blue"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="normal"/>
+
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_below="@+id/tv_data_remaining"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:indeterminate="false"
+                    android:max="50"
+                    android:minWidth="@dimen/_200sdp"
+                    android:minHeight="@dimen/_50sdp"
+                    android:progress="30"
+                    android:progressDrawable="@drawable/progressbar_bg" />
+
+                <TextView
+                    android:id="@+id/tv_total_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/progressBar"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Total 50 GB"
+                    android:textColor="@color/textcolor_upcoming_session_subject"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="normal"/>
+
+
+
+                <TextView
+                    android:id="@+id/tv_current_active_plan_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_total_title"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="@string/trainer_my_payment_current_plan_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"/>
+
+                <RelativeLayout
+                    android:id="@+id/layout_for_free"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_below="@+id/tv_current_active_plan_title"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/profile_subscription_bg">
+
+                    <TextView
+                        android:id="@+id/tv_free"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/profile_free_title"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_for_frees_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_below="@+id/tv_current_active_plan_title"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_toEndOf="@+id/layout_for_free"
+                    android:background="@drawable/profile_subscription_bg_1">
+
+                    <TextView
+                        android:id="@+id/tv_data_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:text="@string/profile_free_data_size_title"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/tv_data_size_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_toEndOf="@+id/tv_data_size"
+                        android:text="@string/profile_free_data_size_duration_title"
+                        android:textSize="@dimen/_9ssp"
+                        android:textColor="@color/textcolor_upcoming_session_name"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_data_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_for_frees_data"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/subscription_gold_bg">
+
+                    <TextView
+                        android:id="@+id/tv_gold_data_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="Gold"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_gold_data_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:layout_toEndOf="@+id/tv_gold_data_name"
+                        android:text="(50 GB)"
+                        android:textColor="@color/textcolor_upcoming_session_name"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_gold_data_started_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gold_data_name"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="@string/profile_free_data_started_title"
+                        android:textColor="@color/textcolor_upcoming_session_subject"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_gold_data_started_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gold_data_name"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_toEndOf="@+id/tv_gold_data_started_title"
+                        android:text="12 Jan, 2020"
+                        android:textColor="@color/textcolor_upcoming_session_subject"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_gold_left_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gold_data_started_title"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="20 GB"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_gold_remaining_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gold_data_started_title"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:layout_toEndOf="@+id/tv_gold_left_data"
+                        android:text="@string/profile_free_data_remaining_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_gold_plan_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gold_data_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_toEndOf="@+id/tv_gold_data_started_date"
+                        android:text="Active"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/active"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_gold_plan_expires_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gold_plan_status"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:text="12 Jan, 2021"
+                        android:textColor="@color/textcolor_upcoming_session_subject"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_gold_plan_expires_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gold_plan_status"
+                        android:layout_toStartOf="@+id/tv_gold_plan_expires_date"
+                        android:text="@string/profile_free_data_expires_title"
+                        android:textColor="@color/textcolor_upcoming_session_subject"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_current_select_plan_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_data_plan"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="@string/trainer_my_payment_select_plan_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_plan"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_below="@+id/tv_current_select_plan_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeParentFragment">
+    <fragment
+        android:id="@+id/homeParentFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.home.HomeParentFragment"
+        android:label="fragment_home_parent"
+        tools:layout="@layout/fragment_home_parent" >
+        <action
+            android:id="@+id/action_homeParentFragment_to_findCourseFragment"
+            app:destination="@id/findCourseFragment" />
+        <action
+            android:id="@+id/action_homeParentFragment_to_findTrainerFragment"
+            app:destination="@id/findTrainerFragment" />
+        <action
+            android:id="@+id/action_homeParentFragment_to_trainerChatFragment"
+            app:destination="@id/trainerChatFragment" />
+        <action
+            android:id="@+id/action_homeParentFragment_to_childrenListFragment"
+            app:destination="@id/childrenListFragment" />
+        <action
+            android:id="@+id/action_homeParentFragment_to_myResourceFragment"
+            app:destination="@id/myResourceFragment" />
+        <action
+            android:id="@+id/action_homeParentFragment_to_myFavoritesFragment"
+            app:destination="@id/myFavoritesFragment" />
+        <action
+            android:id="@+id/action_homeParentFragment_to_videoCourseFragment"
+            app:destination="@id/videoCourseFragment" />
+        <action
+            android:id="@+id/action_homeParentFragment_to_liveCoursesFragment"
+            app:destination="@id/liveCoursesFragment" />
+        <action
+            android:id="@+id/action_homeParentFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeParentFragment_to_reportCardFragment"
+            app:destination="@id/reportCardFragment" />
+        <action
+            android:id="@+id/action_homeParentFragment_to_addChildrenFragment"
+            app:destination="@id/addChildrenFragment"
+            app:popUpTo="@id/homeParentFragment" />
+        <action
+            android:id="@+id/action_homeParentFragment_to_mySessionParentFragment3"
+            app:destination="@id/mySessionParentFragment3" />
+        <action
+            android:id="@+id/action_homeParentFragment_to_trainerSessionDetailsFragment"
+            app:destination="@id/trainerSessionDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainerNotificationFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.trainerfragment.notification.TrainerNotificationFragment"
+        android:label="TrainerNotificationFragment" />
+    <fragment
+        android:id="@+id/trainerChatFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.trainerfragment.chat.TrainerChatFragment"
+        android:label="TrainerChatFragment" />
+    <fragment
+        android:id="@+id/findCourseFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.findcourse.FindCourseFragment"
+        android:label="fragment_find_course"
+        tools:layout="@layout/fragment_find_course" >
+        <action
+            android:id="@+id/action_findCourseFragment_to_subCategoryFragment"
+            app:destination="@id/subCategoryFragment" />
+        <action
+            android:id="@+id/action_findCourseFragment_to_trainerListFragment"
+            app:destination="@id/trainerListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/findTrainerFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.findteacher.FindTrainerFragment"
+        android:label="fragment_find_trainer"
+        tools:layout="@layout/fragment_find_trainer" >
+        <action
+            android:id="@+id/action_findTrainerFragment_to_trainerListFragment"
+            app:destination="@id/trainerListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/childrenListFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.children.ChildrenListFragment"
+        android:label="fragment_children_list"
+        tools:layout="@layout/fragment_children_list" >
+        <argument
+            android:name="student_list"
+            app:argType="com.ryx.tdreeb.data.model.api.addchildmodel.ChildenModel[]"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_childrenListFragment_to_addChildrenFragment"
+            app:destination="@id/addChildrenFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/myResourceFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.myresource.MyResourceFragment"
+        android:label="fragment_my_resource"
+        tools:layout="@layout/fragment_my_resource" >
+        <action
+            android:id="@+id/action_myResourceFragment_to_findResourceFragment"
+            app:destination="@id/findResourceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/findResourceFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.findresource.FindResourceFragment"
+        android:label="fragment_find_resource"
+        tools:layout="@layout/fragment_find_resource" >
+        <action
+            android:id="@+id/action_findResourceFragment_to_paymentSummaryFragment"
+            app:destination="@id/paymentSummaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myFavoritesFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.myfavorites.MyFavoritesFragment"
+        android:label="fragment_my_favorites"
+        tools:layout="@layout/fragment_my_favorites" >
+        <action
+            android:id="@+id/action_myFavoritesFragment_to_paymentSummaryFragment"
+            app:destination="@id/paymentSummaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoCourseFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.videocourse.VideoCourseFragment"
+        android:label="fragment_video_course"
+        tools:layout="@layout/fragment_video_course" >
+        <action
+            android:id="@+id/action_videoCourseFragment_to_videoListFragment"
+            app:destination="@id/videoListFragment" />
+        <action
+            android:id="@+id/action_videoCourseFragment_to_myVideoFragment"
+            app:destination="@id/myVideoFragment" />
+        <action
+            android:id="@+id/action_videoCourseFragment_to_findVideoCourseFragment"
+            app:destination="@id/findVideoCourseFragment" />
+        <action
+            android:id="@+id/action_videoCourseFragment_to_subCategoryFragment2"
+            app:destination="@id/subCategoryFragment" />
+        <action
+            android:id="@+id/action_videoCourseFragment_to_buyTrainerFragment"
+            app:destination="@id/buyTrainerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/liveCoursesFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.livecourses.LiveCoursesFragment"
+        android:label="fragment_live_courses"
+        tools:layout="@layout/fragment_live_courses" >
+        <action
+            android:id="@+id/action_liveCoursesFragment_to_buyTrainerFragment"
+            app:destination="@id/buyTrainerFragment" />
+        <action
+            android:id="@+id/action_liveCoursesFragment_to_trainerSessionDetailsFragment"
+            app:destination="@id/trainerSessionDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.map.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_trainerListFragment"
+            app:destination="@id/trainerListFragment" />
+        <argument
+            android:name="subject_name"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue='""' />
+        <argument
+            android:name="is_course"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainerListFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.trainerlist.TrainerListFragment"
+        android:label="fragment_trainer_list"
+        tools:layout="@layout/fragment_trainer_list" >
+        <action
+            android:id="@+id/action_trainerListFragment_to_trainerDetailsFragment"
+            app:destination="@id/trainerDetailsFragment" />
+        <argument
+            android:name="subject_name"
+            app:argType="com.ryx.tdreeb.data.model.api.subjectmodel.SubjectModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="is_course"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <action
+            android:id="@+id/action_trainerListFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainerDetailsFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.trainerdetails.TrainerDetailsFragment"
+        android:label="fragment_trainer_details"
+        tools:layout="@layout/fragment_trainer_details" >
+        <action
+            android:id="@+id/action_trainerDetailsFragment_to_reviewFragment"
+            app:destination="@id/reviewFragment" />
+        <action
+            android:id="@+id/action_trainerDetailsFragment_to_trainerBookingFragment"
+            app:destination="@id/trainerBookingFragment" />
+        <argument
+            android:name="course_data"
+            app:argType="com.ryx.tdreeb.data.model.api.getcoursemodel.CourseModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="is_course"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.review.ReviewFragment"
+        android:label="fragment_review"
+        tools:layout="@layout/fragment_review" />
+    <fragment
+        android:id="@+id/trainerBookingFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.booktrainer.TrainerBookingFragment"
+        android:label="fragment_trainer_booking"
+        tools:layout="@layout/fragment_trainer_booking" >
+        <action
+            android:id="@+id/action_trainerBookingFragment_to_scheduleDateTimeFragment"
+            app:destination="@id/scheduleDateTimeFragment" />
+        <action
+            android:id="@+id/action_trainerBookingFragment_to_paymentMethodFragment"
+            app:destination="@id/paymentMethodFragment" />
+        <argument
+            android:name="course_model"
+            app:argType="com.ryx.tdreeb.data.model.api.getcoursemodel.CourseModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="is_course"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/scheduleDateTimeFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.scheduledatetime.ScheduleDateTimeFragment"
+        android:label="fragment_schedule_date_time"
+        tools:layout="@layout/fragment_schedule_date_time" >
+        <argument android:name="schedule_type"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue='""' />
+        <argument
+            android:name="trainer_id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentMethodFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.paymentmethod.PaymentMethodFragment"
+        android:label="fragment_payment_method"
+        tools:layout="@layout/fragment_payment_method" >
+        <action
+            android:id="@+id/action_paymentMethodFragment_to_thankYouFragment"
+            app:destination="@id/thankYouFragment" />
+        <argument
+            android:name="live_course_data"
+            app:argType="com.ryx.tdreeb.data.model.api.livecoursesmodel.LiveCourseModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="course_type"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="children_data"
+            app:argType="com.ryx.tdreeb.data.model.api.addchildmodel.ChildenModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="resource_data"
+            app:argType="com.ryx.tdreeb.data.model.api.resourcemodel.ResourceModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="course_data_pass"
+            app:argType="com.ryx.tdreeb.data.model.api.submitmodels.LiveCourseParentModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/thankYouFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.thankyou.ThankYouFragment"
+        android:label="fragment_thank_you"
+        tools:layout="@layout/fragment_thank_you" >
+        <action
+            android:id="@+id/action_thankYouFragment_to_homeParentFragment"
+            app:destination="@id/homeParentFragment" />
+        <argument
+            android:name="invoice_id"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue='""' />
+    </fragment>
+    <fragment
+        android:id="@+id/buyTrainerFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.buytrainer.BuyTrainerFragment"
+        android:label="fragment_buy_trainer"
+        tools:layout="@layout/fragment_buy_trainer" >
+        <action
+            android:id="@+id/action_buyTrainerFragment_to_paymentSummaryFragment"
+            app:destination="@id/paymentSummaryFragment" />
+        <argument
+            android:name="live_courses"
+            app:argType="com.ryx.tdreeb.data.model.api.livecoursesmodel.LiveCourseModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="is_myvideo"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentSummaryFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.paymentsummary.PaymentSummaryFragment"
+        android:label="fragment_payment_summary"
+        tools:layout="@layout/fragment_payment_summary" >
+        <action
+            android:id="@+id/action_paymentSummaryFragment_to_paymentMethodFragment"
+            app:destination="@id/paymentMethodFragment" />
+        <argument
+            android:name="childen_data"
+            app:argType="com.ryx.tdreeb.data.model.api.addchildmodel.ChildenModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="live_course_data"
+            app:argType="com.ryx.tdreeb.data.model.api.livecoursesmodel.LiveCourseModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="resource_data"
+            app:argType="com.ryx.tdreeb.data.model.api.resourcemodel.ResourceModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoListFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.videocourse.videolist.VideoListFragment"
+        android:label="fragment_video_list"
+        tools:layout="@layout/fragment_video_list" >
+        <action
+            android:id="@+id/action_videoListFragment_to_buyTrainerFragment"
+            app:destination="@id/buyTrainerFragment" />
+        <argument
+            android:name="subject_name"
+            app:argType="com.ryx.tdreeb.data.model.api.subjectmodel.SubjectModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_videoListFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/reportCardFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.reportcard.ReportCardFragment"
+        android:label="fragment_report_card"
+        tools:layout="@layout/fragment_report_card" />
+    <fragment
+        android:id="@+id/addChildrenFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.addchildren.AddChildrenFragment"
+        android:label="fragment_add_children"
+        tools:layout="@layout/fragment_add_children" >
+
+        <argument
+            android:name="children_data"
+            app:argType="com.ryx.tdreeb.data.model.api.addchildmodel.ChildenModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainerSessionDetailsFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.trainerfragment.trainersession.sessiondetails.TrainerSessionDetailsFragment"
+        android:label="TrainerSessionDetailsFragment" >
+        <argument
+            android:name="session_data"
+            app:argType="com.ryx.tdreeb.data.model.api.bookingmodel.SessionModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_trainerSessionDetailsFragment_to_scheduleDateTimeFragment"
+            app:destination="@id/scheduleDateTimeFragment" />
+        <action
+            android:id="@+id/action_trainerSessionDetailsFragment_to_directionMapFragment"
+            app:destination="@id/directionMapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mySessionParentFragment3"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.mysession.MySessionParentFragment"
+        android:label="fragment_my_session_parent"
+        tools:layout="@layout/fragment_my_session_parent" >
+        <action
+            android:id="@+id/action_mySessionParentFragment3_to_trainerSessionDetailsFragment"
+            app:destination="@id/trainerSessionDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/directionMapFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.map.directionmap.DirectionMapFragment"
+        android:label="fragment_direction_map"
+        tools:layout="@layout/fragment_direction_map" >
+        <argument
+            android:name="session_data"
+            app:argType="com.ryx.tdreeb.data.model.api.bookingmodel.SessionModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/subCategoryFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.findcourse.subcategory.SubCategoryFragment"
+        android:label="fragment_sub_category"
+        tools:layout="@layout/fragment_sub_category" >
+        <argument
+            android:name="subject_name"
+            app:argType="com.ryx.tdreeb.data.model.api.subjectmodel.SubjectModel"
+            android:defaultValue="@null"
+            app:nullable="true" />
+        <argument
+            android:name="is_course"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <action
+            android:id="@+id/action_subCategoryFragment_to_trainerListFragment"
+            app:destination="@id/trainerListFragment" />
+        <action
+            android:id="@+id/action_subCategoryFragment_to_videoListFragment"
+            app:destination="@id/videoListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myVideoFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.videocourse.myvideo.MyVideoFragment"
+        android:label="fragment_my_video"
+        tools:layout="@layout/fragment_my_video" >
+        <action
+            android:id="@+id/action_myVideoFragment_to_buyTrainerFragment"
+            app:destination="@id/buyTrainerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/findVideoCourseFragment"
+        android:name="com.ryx.tdreeb.ui.fragments.parentfragment.videocourse.findvideo.FindVideoCourseFragment"
+        android:label="fragment_find_video_course"
+        tools:layout="@layout/fragment_find_video_course" >
+        <action
+            android:id="@+id/action_findVideoCourseFragment_to_subCategoryFragment"
+            app:destination="@id/subCategoryFragment" />
+        <action
+            android:id="@+id/action_findVideoCourseFragment_to_videoListFragment"
+            app:destination="@id/videoListFragment" />
+    </fragment>
+</navigation>

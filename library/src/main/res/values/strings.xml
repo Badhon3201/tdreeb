@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Magical ExoPlayer</string>
+    <string name="title_retry">Retry</string>
+    <string name="video_list">My Video Course List</string>
+</resources>

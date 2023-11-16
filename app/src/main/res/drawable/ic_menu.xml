@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:viewportWidth="160"
+    android:viewportHeight="160"
+    android:width="160dp"
+    android:height="160dp">
+    <path
+        android:pathData="M5.5 64L155 64.5L5.5 65L5.5 64Z"
+        android:fillColor="#202020"
+        android:fillAlpha="0.5333333"
+        android:strokeColor="#202020"
+        android:strokeAlpha="0.5333333"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M5.5 95L116 95.5L5.5 96L5.5 95Z"
+        android:fillColor="#202020"
+        android:fillAlpha="0.5333333"
+        android:strokeColor="#202020"
+        android:strokeAlpha="0.5333333"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M116.5 96L117 104.5L116 104.5L116.5 96Z"
+        android:fillColor="#202020"
+        android:fillAlpha="0.8823529"
+        android:strokeColor="#202020"
+        android:strokeAlpha="0.8823529"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M5 55L154.5 55L155 55.5L155 64L5.5 64L5 63.5L5 55Z"
+        android:fillColor="#202020"
+        android:strokeColor="#202020"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M5 96L115.5 96L116 96.5L116 105L5.5 105L5 104.5L5 96Z"
+        android:fillColor="#202020"
+        android:strokeColor="#202020"
+        android:strokeWidth="1" />
+</vector>

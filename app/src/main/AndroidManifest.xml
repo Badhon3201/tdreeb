@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ryx.tdreeb">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".MvvmApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Tdreeb"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.activites.undereigthteen.UnderEighteenActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activites.trainer.TrainerMainActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activites.splash.SplashActivityWithIntroSlider"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".ui.activites.otp.OtpActivity" />
+        <activity android:name=".ui.activites.registration.RegistrationActivity"/>
+        <activity android:name=".ui.activites.splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activites.login.LoginActivity"></activity>
+        <activity android:name=".ui.activites.map.addresssearch.MapSuggestionActivity" />
+        <activity android:name=".ui.activites.map.MapActivity" />
+        <activity android:name=".ui.activites.main.MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.ryx.tdreeb.fileproviders"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+    </application>
+
+</manifest>

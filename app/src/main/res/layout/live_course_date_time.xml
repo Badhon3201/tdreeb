@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ryx.tdreeb.ui.fragments.trainerfragment.livecourses.addlivecourse.LiveCourseItemViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_31sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:weightSum="2.2">
+
+        <TextView
+            android:id="@+id/et_course_date"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_myschedule_fromto_bg"
+            android:gravity="center"
+            android:hint="@string/pick_date"
+            android:inputType="numberDecimal"
+            android:onClick="@{()-> viewModel.onClickDate()}"
+            android:paddingStart="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:text="@{viewModel.courseDate}"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="@dimen/_10ssp"
+            tools:text="27/05/2021" />
+
+        <TextView
+            android:id="@+id/et_course_time"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_myschedule_fromto_bg"
+            android:gravity="center"
+            android:hint="@string/pick_time"
+            android:inputType="numberDecimal"
+            android:onClick="@{()-> viewModel.onClickTime()}"
+            android:paddingStart="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:text="@{viewModel.courseTime}"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="@dimen/_10ssp"
+            tools:text="10:20 AM" />
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_weight="0.2"
+            android:onClick="@{()-> viewModel.onClickClose()}"
+            android:text="x"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

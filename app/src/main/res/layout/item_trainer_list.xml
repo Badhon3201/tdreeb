@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ryx.tdreeb.ui.fragments.parentfragment.trainerlist.TrainerListItemViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg_with_border"
+        android:clickable="true"
+        android:onClick="@{()-> viewModel.onClickItem()}"
+        android:padding="@dimen/_10sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/course_image"
+            imageFromUrl="@{viewModel.image}"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            app:civ_border_color="@color/border_color_of_toolbar_image"
+            app:civ_border_width="@dimen/_3sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/course_image"
+            android:text="@{viewModel.name}"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_course_hour"
+            app:layout_constraintStart_toEndOf="@+id/course_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_sources"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_toEndOf="@+id/course_image"
+            android:text="@{viewModel.subject}"
+            android:textAllCaps="false"
+            android:textColor="@color/textcolor_upcoming_session_subject"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="@dimen/_7sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_toEndOf="@+id/course_image"
+            android:src="@drawable/location"
+            app:layout_constraintStart_toStartOf="@+id/tv_sources"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sources" />
+
+        <TextView
+            android:id="@+id/tv_country"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_sources"
+            android:layout_alignEnd="@+id/tv_sources"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/iv_location"
+            android:text="@{viewModel.address}"
+            android:textAllCaps="false"
+            android:textColor="@color/textcolor_upcoming_session_subject"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_location"
+            app:layout_constraintEnd_toEndOf="@+id/tv_sources"
+            app:layout_constraintStart_toEndOf="@+id/iv_location"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sources" />
+
+        <TextView
+            android:id="@+id/tv_course_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_name"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:text="@{viewModel.price}"
+            android:textAllCaps="false"
+            android:textColor="@color/splash"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_rating"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_toEndOf="@+id/tv_name"
+            android:src="@drawable/star"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rating_value"
+            app:layout_constraintEnd_toStartOf="@+id/tv_rating_value"
+            app:layout_constraintTop_toTopOf="@+id/tv_rating_value" />
+
+        <TextView
+            android:id="@+id/tv_rating_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/iv_rating"
+            android:text="@{viewModel.rate}"
+            android:textAllCaps="false"
+            android:textColor="@color/textcolor_upcoming_session_subject"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_course_hour"
+            app:layout_constraintTop_toBottomOf="@+id/tv_course_hour" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

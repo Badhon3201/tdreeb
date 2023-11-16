@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ryx.tdreeb.ui.fragments.trainerfragment.profile.TrainerProfileViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@color/app_color"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/custom_toolbar"
+                layout="@layout/custom_toolbar_for_trainer_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/custom_toolbar"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/trainer_chat_layout_bg">
+
+                <TextView
+                    android:id="@+id/tv_personal_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="@string/personal_info_title"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/my_image"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@+id/tv_personal_info"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/ic_user"
+                    app:civ_border_color="@color/border_color_of_toolbar_image"
+                    app:civ_border_width="@dimen/_4sdp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_browse_photo"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:onClick="@{()-> viewModel.onClickImg()}"
+                    android:layout_below="@+id/tv_personal_info"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_toEndOf="@+id/my_image"
+                    android:background="@drawable/browse_photo_bg"
+                    android:text="@string/browse_photo_title"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/btn_change_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_below="@+id/tv_personal_info"
+                    android:layout_alignParentEnd="true"
+                    android:onClick="@{()-> viewModel.onClickImg()}"
+                    android:layout_marginStart="-10dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_toEndOf="@+id/btn_browse_photo"
+                    android:background="@drawable/change_image_bg"
+                    android:gravity="center"
+                    android:text="@string/change_image_title"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textcolor_upcoming_session_subject"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="normal" />
+
+                <LinearLayout
+                    android:id="@+id/first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btn_change_image"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/f_n_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/f_n_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/f_n_title_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:text="@string/star"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edtFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_below="@+id/first"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/profile_edt_bg"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="@string/profile_f_n_title"
+                    android:inputType="textPersonName"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/textcolor_upcoming_session_subject"
+                    android:textSize="@dimen/_11ssp" />
+
+                <LinearLayout
+                    android:id="@+id/second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtFirstName"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/l_n_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/l_n_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/l_n_title_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="@string/star"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edtLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_below="@+id/second"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/profile_edt_bg"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="@string/profile_l_n_title"
+                    android:inputType="textPersonName"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/textcolor_upcoming_session_subject"
+                    android:textSize="@dimen/_11ssp" />
+
+                <LinearLayout
+                    android:id="@+id/third"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtLastName"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_gender_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gender_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/gender_title_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:text="@string/star"
+                        android:textColor="@color/red" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fourth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/third"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioMale"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@android:color/transparent"
+                            android:checked="true"
+                            android:textColor="@color/textcolor_upcoming_session_name" />
+
+                        <TextView
+                            android:id="@+id/tv_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:text="@string/male"
+                            android:textColor="@color/textcolor_upcoming_session_name"
+                            android:textSize="@dimen/_11ssp" />
+
+                        <RadioButton
+                            android:id="@+id/radioFemale"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:background="@drawable/custom_radio_button"
+                            android:button="@android:color/transparent"
+                            android:checked="false"
+                            android:textColor="@color/textcolor_upcoming_session_name" />
+
+                        <TextView
+                            android:id="@+id/tv_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:text="@string/female"
+                            android:textColor="@color/textcolor_upcoming_session_name"
+                            android:textSize="@dimen/_11ssp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/fifth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fourth"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_dob_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_dob_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/dob_title_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:text="@string/star"
+                        android:textColor="@color/red" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/edtdob"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_below="@+id/fifth"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/profile_edt_bg"
+                    android:backgroundTint="@color/white"
+                    android:onClick="@{()-> viewModel.onClickDOB()}"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/profile_dob_hint_title"
+                    android:inputType="textPersonName"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/textcolor_upcoming_session_subject"
+                    android:textSize="@dimen/_11ssp" />
+
+                <LinearLayout
+                    android:id="@+id/sixth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtdob"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_travel_to_another_title"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/edttravel"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_below="@+id/sixth"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/profile_edt_bg"
+                    android:backgroundTint="@color/white"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawableTint="@color/grey"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp"
+                    android:dropDownVerticalOffset="@dimen/_10sdp"
+                    android:popupBackground="@color/grey"
+                    android:spinnerMode="dropdown" />
+
+
+                <LinearLayout
+                    android:id="@+id/bank_name_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edttravel"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/l_n_bank_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bank_name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/l_n_bank_namer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="@string/star"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edt_bank_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_below="@+id/bank_name_ll"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/profile_edt_bg"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="@string/enter_bank_name"
+                    android:inputType="textPersonName"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/textcolor_upcoming_session_subject"
+                    android:textSize="@dimen/_11ssp" />
+
+                <LinearLayout
+                    android:id="@+id/iban_number_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edt_bank_name"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/l_n_iban_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/iban_number"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/l_n_iban_number_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="@string/star"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edt_iban_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_below="@+id/iban_number_ll"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/profile_edt_bg"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="@string/enter_iban_number"
+                    android:inputType="textPersonName"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/textcolor_upcoming_session_subject"
+                    android:textSize="@dimen/_11ssp" />
+
+                <LinearLayout
+                    android:id="@+id/seventh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edt_iban_number"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_nationality_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/edtNationality"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_below="@+id/seventh"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/profile_edt_bg"
+                    android:backgroundTint="@color/white"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawableTint="@color/grey"
+                    android:onClick="@{()-> viewModel.onClickNationality()}"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/profile_nationality_hint_title"
+                    android:inputType="textPersonName"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/textcolor_upcoming_session_subject"
+                    android:textSize="@dimen/_11ssp" />
+
+                <LinearLayout
+                    android:id="@+id/eight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtNationality"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_language_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/edtLanguageSpeak"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_below="@+id/eight"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/profile_edt_bg"
+                    android:backgroundTint="@color/white"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawableTint="@color/grey"
+                    android:onClick="@{()-> viewModel.onClickLanguage()}"
+                    android:ems="10"
+                    android:hint="@string/profile_language_hint_title"
+                    android:inputType="textPersonName"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/textcolor_upcoming_session_subject"
+                    android:textSize="@dimen/_11ssp" />
+
+                <LinearLayout
+                    android:id="@+id/nine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtLanguageSpeak"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_change_location_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="@string/star"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/edtLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_below="@+id/nine"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/profile_edt_bg"
+                    android:backgroundTint="@color/white"
+                    android:drawableEnd="@drawable/ic_google_maps"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:ems="10"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:hint="@string/profile_change_location_hint_title"
+                    android:inputType="textPersonName"
+                    android:onClick="@{()-> viewModel.onClickAddress()}"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/textcolor_upcoming_session_subject"
+                    android:textSize="@dimen/_11ssp" />
+
+                <TextView
+                    android:id="@+id/tv_subscription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtLocation"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="@string/profile_subscription_title"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_view_plan"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_below="@+id/edtLocation"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/view_plan_btn_bg"
+                    android:text="@string/profile_view_plan_title"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9ssp"
+                    android:textStyle="normal" />
+
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/layout_for_free"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_below="@+id/btn_view_plan"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/profile_subscription_bg">
+
+                    <TextView
+                        android:id="@+id/tv_free"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/profile_free_title"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_for_frees_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_26sdp"
+                    android:visibility="gone"
+                    android:layout_below="@+id/btn_view_plan"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_toEndOf="@+id/layout_for_free"
+                    android:background="@drawable/profile_subscription_bg_1">
+
+                    <TextView
+                        android:id="@+id/tv_data_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:text="@string/profile_free_data_size_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:id="@+id/tv_data_size_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_toEndOf="@+id/tv_data_size"
+                        android:text="@string/profile_free_data_size_duration_title"
+                        android:textColor="@color/textcolor_upcoming_session_name"
+                        android:textSize="@dimen/_9ssp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_data_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_below="@+id/layout_for_frees_data"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/subscription_gold_bg">
+
+                    <TextView
+                        android:id="@+id/tv_gold_data_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="Gold"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_gold_data_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:layout_toEndOf="@+id/tv_gold_data_name"
+                        android:text="(50 GB)"
+                        android:textColor="@color/textcolor_upcoming_session_name"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_gold_data_started_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gold_data_name"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="@string/profile_free_data_started_title"
+                        android:textColor="@color/textcolor_upcoming_session_subject"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_gold_data_started_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gold_data_name"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_toEndOf="@+id/tv_gold_data_started_title"
+                        android:text="12 Jan, 2020"
+                        android:textColor="@color/textcolor_upcoming_session_subject"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_gold_left_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gold_data_started_title"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="20 GB"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_gold_remaining_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gold_data_started_title"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:layout_toEndOf="@+id/tv_gold_left_data"
+                        android:text="@string/profile_free_data_remaining_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_gold_plan_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gold_data_size"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_toEndOf="@+id/tv_gold_data_started_date"
+                        android:text="Active"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/active"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_gold_plan_expires_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gold_plan_status"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:text="12 Jan, 2021"
+                        android:textColor="@color/textcolor_upcoming_session_subject"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_gold_plan_expires_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_gold_plan_status"
+                        android:layout_toStartOf="@+id/tv_gold_plan_expires_date"
+                        android:text="@string/profile_free_data_expires_title"
+                        android:textColor="@color/textcolor_upcoming_session_subject"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="normal">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@+id/layout_data_plan"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:background="@drawable/profile_save_continue_bg"
+                    android:text="@string/profile_save_btn_title"
+                    android:textAlignment="center"
+                    android:onClick="@{()-> viewModel.onClickUpdate()}"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="normal" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

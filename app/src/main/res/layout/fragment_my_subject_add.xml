@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.dialogs.mysubject.MySubjectAddFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.ryx.tdreeb.ui.dialogs.mysubject.MySubjectAddViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_paste_link">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/enter_subject_details"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_subject"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/dialog_subject_bg"
+            android:drawableRight="@drawable/ic_arrow_down"
+            android:drawableTint="@color/grey"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="@string/select_subject"
+            android:inputType="textPersonName"
+            android:onClick="@{()-> viewModel.onClickSubject()}"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/textcolor_upcoming_session_subject"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_sub_subject"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/dialog_subject_bg"
+            android:drawableRight="@drawable/ic_arrow_down"
+            android:drawableTint="@color/grey"
+            android:ems="10"
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:hint="@string/select_sub_subject"
+            android:inputType="textPersonName"
+            android:onClick="@{()-> viewModel.onClickSubSubject()}"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/textcolor_upcoming_session_subject"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subject"/>
+
+        <TextView
+            android:id="@+id/edt_curriculum"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/dialog_subject_bg"
+            android:drawableRight="@drawable/ic_arrow_down"
+            android:drawableTint="@color/grey"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="@string/select_curriculum"
+            android:inputType="textPersonName"
+            android:onClick="@{()-> viewModel.onClickCurriculum()}"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/textcolor_upcoming_session_subject"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sub_subject" />
+
+        <TextView
+            android:id="@+id/edt_grade"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/dialog_subject_bg"
+            android:drawableRight="@drawable/ic_arrow_down"
+            android:drawableTint="@color/grey"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="@string/select_grade"
+            android:inputType="textPersonName"
+            android:onClick="@{()-> viewModel.onClickGrade()}"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textColorHint="@color/textcolor_upcoming_session_subject"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_curriculum" />
+
+        <EditText
+            android:id="@+id/edt_amount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/dialog_subject_bg"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="@string/enter_ammount_per_hour"
+            android:inputType="numberDecimal"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/textcolor_upcoming_session_subject"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_grade" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_done"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/btn_blue_dark_round"
+            android:onClick="@{()-> viewModel.onClickDone()}"
+            android:text="@string/done"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_amount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

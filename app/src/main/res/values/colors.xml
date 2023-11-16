@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#2EAEC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="black_trns">#9E000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FFC107</color>
+
+    <color name="app_color">#369CDA</color>
+    <color name="app_bg_color">#ECF3F5</color>
+    <color name="app_color_two">#12679A</color>
+    <color name="app_map_line">#2EAEC4</color>
+
+
+    <color name="red">#DC143C</color>
+    <color name="darkred">#FF2727</color>
+    <color name="red1">#FF0000</color>
+    <color name="splash">#298CC8</color>
+    <color name="online">#68D371</color>
+    <color name="active">#09D22A</color>
+    <color name="upcoming_session_bg">#ECF3F5</color>
+    <color name="border_color_of_toolbar_image">#CEE6F4</color>
+    <color name="border_color_of_toolbar_image_two">#4A8AB1</color>
+    <color name="textcolor_upcoming_session_name">#757575</color>
+    <color name="textcolor_upcoming_session_subject">#B8B9B9</color>
+    <color name="accept_border">#9BD8E3</color>
+    <color name="sky_blue">#6CB9E9</color>
+    <color name="gold">#B89867</color>
+    <color name="black_shadow">#202020</color>
+    <color name="reddish">#FFABAB</color>
+    <color name="session_details_bg_color">#E1E5E6</color>
+
+    <!-- Calender-->
+    <color name="cyan_dark">#70BDC6</color>
+    <color name="shadow">#d0d8dc</color>
+
+
+    <array name="dot_on_page_active">
+    <item>#FFFFFFFF</item>
+    <item>#FFFFFFFF</item>
+    <item>#FFFFFFFF</item>
+    </array>
+    <array name="dot_on_page_not_active">
+    <item>#6CB9E9</item>
+    <item>#6CB9E9</item>
+    <item>#6CB9E9</item>
+    </array>
+</resources>

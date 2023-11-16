@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home_deselect"
+        android:title="@string/homme_bottom_nav_title" />
+    <item
+        android:id="@+id/navigation_my_schedule"
+        android:icon="@drawable/my_schedule_deselect"
+        android:title="@string/schedule_bottom_nav_title" />
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/chat_deselect"
+        android:title="@string/chat_bottom_title"
+
+        />
+    <item
+        android:id="@+id/navigation_notification"
+        android:icon="@drawable/notification_deselect"
+        android:title="@string/notification_bottom_nav_title" />
+</menu>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ryx.tdreeb.ui.fragments.trainerfragment.livecourses.addlivecourse.LiveCourseItemViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_26sdp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/et_course_date"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_myschedule_fromto_bg"
+            android:gravity="center"
+            android:hint="@string/pick_date"
+            android:inputType="numberDecimal"
+            android:paddingStart="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_2sdp"
+            android:text="@{viewModel.courseDate}"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="@dimen/_9ssp"
+            tools:text="27/05/2021" />
+
+        <TextView
+            android:id="@+id/et_course_time"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_myschedule_fromto_bg"
+            android:gravity="center"
+            android:hint="@string/pick_time"
+            android:inputType="numberDecimal"
+            android:paddingStart="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_2sdp"
+            android:text="@{viewModel.courseTime}"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="@dimen/_9ssp"
+            tools:text="10:20 AM" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

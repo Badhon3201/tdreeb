@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ryx.tdreeb.ui.fragments.trainerfragment.livecourses.LiveCourseItemViewModel" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg_with_border">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/dummy_image_1"
+            android:visibility="gone"
+            app:civ_border_color="@color/border_color_of_toolbar_image"
+            app:civ_border_width="@dimen/_3sdp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:text="@{viewModel.course_title}"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_rating"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_11sdp"
+            android:layout_toEndOf="@+id/tv_name"
+            android:src="@drawable/star" />
+
+        <TextView
+            android:id="@+id/tv_rating_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_11sdp"
+            android:layout_toEndOf="@+id/iv_rating"
+            android:text="4.2"
+            android:textAllCaps="false"
+            android:textColor="@color/textcolor_upcoming_session_subject"
+            android:textSize="@dimen/_10ssp" />
+
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:onClick="@{()-> viewModel.onClickEdit()}"
+            android:src="@drawable/edit2" />
+
+        <TextView
+            android:id="@+id/tv_subjects_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:text="@string/trainer_subjects_title"
+            android:textAllCaps="false"
+            android:textColor="@color/textcolor_upcoming_session_subject"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/tv_subjects"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_toEndOf="@+id/tv_subjects_title"
+            android:text="@{viewModel.course_subject}"
+            android:textAllCaps="false"
+            android:textColor="@color/splash"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/tv_aed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_subjects"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:text="@{viewModel.price}"
+            android:textAllCaps="false"
+            android:textColor="@color/splash"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_edit"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@{viewModel.hr}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp" />
+
+        <ImageView
+            android:id="@+id/iv_clock"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_below="@+id/iv_edit"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_toStartOf="@+id/tv_time"
+            android:src="@drawable/time" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_in_zoom"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_below="@+id/tv_time"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/in_zoom_btn_bg"
+            android:text="@string/trainer_zoom_title"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+</layout>

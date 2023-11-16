@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:innerRadiusRatio="4.5"
+    android:shape="ring"
+    android:thickness="@dimen/_5sdp"
+    android:useLevel="false">
+    <solid android:color="@color/border_color_of_toolbar_image"/>
+    <size
+        android:height="@dimen/_10sdp"
+        android:width="@dimen/_10sdp" />
+</shape>

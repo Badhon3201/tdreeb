@@ -1,0 +1,381 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">tdreeb</string>
+
+    <!-- TODO: App Message-->
+    <string name="api_retry_error">Please retry!</string>
+    <string name="api_default_error">Something wrong happened!</string>
+    <string name="some_error">Some Error Occurred!</string>
+    <string name="connection_error">Internet connection was lost!</string>
+
+    <string name="app_market_link">app_market_link</string>
+    <string name="app_google_play_store_link">app_google_play_store_link</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="retry">Try Again</string>
+    <string name="home">Home</string>
+    <string name="my_session">My Session</string>
+    <string name="chat">Chat</string>
+    <string name="notification">Notification</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_type">Login Type</string>
+    <string name="login_title">Login</string>
+    <string name="star">*</string>
+    <string name="phone_title">Phone</string>
+    <string name="submit_btn_title">Submit</string>
+    <string name="or">or</string>
+    <string name="register">New user?Register</string>
+    <string name="guardian_reg_title">Guardian Registration</string>
+    <string name="trainer_reg_title">Trainer Registration</string>
+    <string name="trainee_reg_title">Trainee Registration</string>
+    <string name="f_n_title">First Name</string>
+    <string name="l_n_title">Last Name</string>
+    <string name="pass_title">Password</string>
+    <string name="conf_pass_title">Confirm Password</string>
+    <string name="gender_title">Gender</string>
+    <string name="register_title">Register</string>
+    <string name="registration_tersm_condition">By clicking the button you agree to our terms and conditions of services and privacy policy</string>
+    <string name="login_message_btn">Have an account? Login</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="mobile_edit_text_hint">Enter Mobile Number</string>
+    <string name="next">Next</string>
+    <string name="get_start">Get Started</string>
+    <string name="skip">Skip</string>
+    <string name="splash_title_1">Control Personal trainers all over world</string>
+    <string name="splash_subtitle_1">Morbi et dictum ante, vel hendrerit dolor.Maecenas tincidunt, velit sit amet pharetra laoreet, nisl orci tempor</string>
+    <string name="verification_title">Verification Code</string>
+    <string name="verification_message">Please type the verification code send to the</string>
+    <string name="verify_btn_title">Verify</string>
+    <string name="otp_msg">Didn\'t Receive OTP?</string>
+    <string name="resend_title"><u>RESEND</u></string>
+    <string name="homme_bottom_nav_title">Home</string>
+    <string name="schedule_bottom_nav_title">Schedule</string>
+    <string name="chat_bottom_nav_title">Message</string>
+    <string name="chat_bottom_title">Chat</string>
+    <string name="notification_bottom_nav_title">Notification</string>
+    <string name="my_session_title">My\nSessions</string>
+    <string name="guardian_manage_schedule_title">Manage\nSchedule</string>
+    <string name="guardian_all_request_title">All\nRequest</string>
+    <string name="guardian_my_course_title">My\nCourses</string>
+    <string name="guardian_live_course_title">Live\nCourse</string>
+    <string name="guardian_video_course_title">Video\nCourse</string>
+    <string name="guardian_chats_title">Chats</string>
+    <string name="guardian_my_resources_title">My\nResources</string>
+    <string name="guardian_my_payments_title">My\nPayments</string>
+    <string name="guardian_upcoming_session_title">Upcoming\nSession</string>
+    <string name="guardian_upcoming_session_title_without_new_line">Upcoming Session</string>
+    <string name="view_all_title">View All</string>
+    <string name="message_title_in_chat">All Messages</string>
+    <string name="chat_with_admin_in_chat">Chat with Admin</string>
+    <string name="search_in_chat">Search</string>
+    <string name="notification_title">Notification</string>
+    <string name="trainer_my_session_title">All Session</string>
+    <string name="chat_title_upcoming">Chat</string>
+    <string name="all_request_title">All Request</string>
+    <string name="accept_title">Accept</string>
+    <string name="cancel_title">Cancel</string>
+    <string name="view_title">View</string>
+    <string name="profile_title">Profile</string>
+    <string name="personal_info_title">Personal Info</string>
+    <string name="browse_photo_title">Browse Photo</string>
+    <string name="change_image_title">Change Image</string>
+    <string name="profile_f_n_title">Enter First Name</string>
+    <string name="profile_l_n_title">Enter Last Name</string>
+    <string name="profile_dob_title">Date of Birth</string>
+    <string name="profile_dob_hint_title">Select your Date of Birth</string>
+    <string name="profile_travel_to_another_title">Travel to Another Area</string>
+    <string name="profile_nationality_title">Nationality <font fgcolor='#FF2727'>*</font></string>
+    <string name="profile_nationality_hint_title">Select your Nationality</string>
+    <string name="profile_language_title">Which language do you speak?</string>
+    <string name="profile_language_hint_title">Select Language</string>
+    <string name="profile_change_location_title">Change location</string>
+    <string name="profile_change_location_hint_title">Click here to Enter your location</string>
+    <string name="profile_subscription_title">Subscription</string>
+    <string name="profile_view_plan_title">View Plan</string>
+    <string name="profile_free_title">Free</string>
+    <string name="profile_free_data_size_title">1 GB</string>
+    <string name="profile_free_data_size_duration_title">Life Time</string>
+    <string name="profile_free_data_started_title">Started</string>
+    <string name="profile_free_data_expires_title">Expires</string>
+    <string name="profile_free_data_remaining_title">Remaining</string>
+    <string name="profile_save_btn_title">Save &amp; Continue</string>
+    <string name="trainer_my_courses_title">My Subjects</string>
+    <string name="trainer_my_subject_title">My Subject</string>
+    <string name="trainer_add_new_subject_title">Add New Subject</string>
+    <string name="trainer_aed_title">AED</string>
+    <string name="trainer_live_courses_title">Live Courses</string>
+    <string name="trainer_live_courses_heading">My Live Courses</string>
+    <string name="trainer_add_live_btn_title">Add Live</string>
+    <string name="add_live_course">Add Live Course</string>
+    <string name="trainer_subjects_title">Subjects</string>
+    <string name="trainer_zoom_title">In Zoom</string>
+    <string name="trainer_video_courses_toolbar_title">Video Course</string>
+    <string name="trainer_video_courses_heading">My Video Courses</string>
+    <string name="trainer_add_video_btn_title">Add Video Course</string>
+    <string name="trainer_my_resources_title">My Resources</string>
+    <string name="trainer_my_resources_heading">My Resources</string>
+    <string name="resources">Resources</string>
+    <string name="trainer_upload_resources_btn_title">Upload Resources</string>
+    <string name="trainer_my_payment_toolbar_title">Subscription</string>
+    <string name="trainer_my_payment_data_remaining_title">Remaining</string>
+    <string name="trainer_my_payment_data_total_title">Total</string>
+    <string name="trainer_my_payment_current_plan_title">Current Active Plan</string>
+    <string name="trainer_my_payment_select_plan_title">Select your Plan</string>
+    <string name="trainer_my_schedule_toolbar_title">Manage Schedule</string>
+    <string name="trainer_my_schedule_header_title">My Available Direct Schedule</string>
+    <string name="trainer_my_schedule_avoiding_direct_training_title">Available for Direct training</string>
+    <string name="trainer_my_schedule_from_title">From</string>
+    <string name="trainer_my_schedule_to_title">To</string>
+    <string name="trainer_my_schedule_start_date">Start Date</string>
+    <string name="trainer_my_schedule_end_date">End Date</string>
+    <string name="trainer_my_schedule_start_end_date">select your start and end date for training</string>
+    <string name="trainer_my_schedule_days">Days</string>
+    <string name="trainer_my_schedule_time">Time</string>
+    <string name="trainer_my_schedule_sunday">Sunday</string>
+    <string name="trainer_my_schedule_monday">Monday</string>
+    <string name="trainer_my_schedule_tuesday">Tuesday</string>
+    <string name="trainer_my_schedule_wednesday">Wednesday</string>
+    <string name="trainer_my_schedule_thursday">Thursday</string>
+    <string name="trainer_my_schedule_friday">Friday</string>
+    <string name="trainer_my_schedule_saturday">Saturday</string>
+    <string name="trainer_my_schedule_group_session_title">Available for group session</string>
+    <string name="trainer_my_schedule_online_schedule_title">My Available online schedule</string>
+    <string name="trainer_my_schedule_online_training_title">Available for Online Training</string>
+    <string name="trainer_session_details_toolbar_title">Session Details</string>
+    <string name="trainer_session_details_reach_at_title">Reach at</string>
+    <string name="trainer_session_details_distance_title">Distance</string>
+    <string name="trainer_session_details_session_time_title">Session Time</string>
+    <string name="trainer_session_details_started_location_title">Started from the Location</string>
+    <string name="trainer_session_details_estimate_time_title">Enter Estimated Time</string>
+    <string name="trainer_session_details_estimate_time_title_with_value"><![CDATA[ <p>Estimated arrival time of Trainer is %1$s hour %2$s minutes</p> ]]></string>
+    <string name="trainer_session_details_hour_title">hour</string>
+    <string name="trainer_session_details_min_title">min</string>
+    <string name="trainer_session_reached_title">Click if Reached</string>
+    <string name="trainer_session_completed_title">Session Completed</string>
+    <string name="trainer_session_start_title">Start</string>
+    <string name="trainer_session_yes_title">Yes</string>
+    <string name="trainer_session_btn_view_map">View in Map</string>
+    <string name="trainer_session_btn_msg_title">Message</string>
+    <string name="trainer_session_details_online_toolbar_title">Online Session Details</string>
+    <string name="trainer_session_details_online_edit_btn_title">Edit</string>
+    <string name="trainer_session_details_online_title">Online</string>
+    <string name="trainer_session_details_login_zoom_title">Join Class in Zoom</string>
+    <string name="trainer_session_details_login_zoom_link_title">Zoom Link</string>
+    <string name="trainer_session_details_login_share_title">Share</string>
+    <string name="trainer_session_details_login_copy_title">Copy</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="completed">Completed</string>
+    <string name="paste_zoom_link">Paste Zoom Link*</string>
+    <string name="course_title">Course Title<font fgcolor='#FF2727'>*</font></string>
+    <string name="enter_your_title">Enter Your Title</string>
+    <string name="course_subject">Course / Subject<font fgcolor='#FF2727'>*</font></string>
+    <string name="course_sub_subject">Sub Subject<font fgcolor='#FF2727'>*</font></string>
+    <string name="example_subject">Eg. Gym, English</string>
+    <string name="enter_price">Enter Amount</string>
+    <string name="course_price">Course Price</string>
+    <string name="when_course">When?</string>
+    <string name="pick_date">Pick a date</string>
+    <string name="course_time">Time?</string>
+    <string name="pick_time">Pick a time</string>
+    <string name="provide_a_zoom_meeting_link">Provide a Zoom meeting link</string>
+    <string name="paste_zoom_link_here">Paste Zoom link here</string>
+    <string name="meeting_password">Meeting Password</string>
+    <string name="enter_meeting_password">Enter Zoom password</string>
+    <string name="add_details">Add details<font fgcolor='#FF2727'>*</font></string>
+    <string name="add_details_one_by_one">Add details one by one</string>
+    <string name="add_description">Add Description<font fgcolor='#FF2727'>*</font></string>
+    <string name="description">Description</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="upload_video_or_img">Upload Image</string>
+    <string name="save">Save</string>
+    <string name="browse">Browse</string>
+    <string name="click_to_upload">Click to Upload</string>
+    <string name="video_courses">Video Course</string>
+    <string name="price">Price<font fgcolor='#FF2727'>*</font></string>
+    <string name="upload_course_video_title">Upload Course Video / Title<font fgcolor='#FF2727'>*</font></string>
+    <string name="upload_new_resource">Upload New Resource</string>
+    <string name="upload_resource">Upload Resource</string>
+    <string name="resource_name">Resource Name</string>
+    <string name="type_name_here">Type name here ..</string>
+    <string name="curriculum">Curriculum</string>
+    <string name="select_curriculum">Select Curriculum</string>
+    <string name="grade">Grade</string>
+    <string name="grade_value"><![CDATA[ <p><b><big><font>%1$s</font></big></b><br>Grade</p> ]]></string>
+    <string name="select_grade">Select Grade</string>
+    <string name="select_the_subject">Select the Subject</string>
+    <string name="subject">Subject</string>
+    <string name="type_selling_price_here">Type selling price here ..</string>
+    <string name="describe_resource_in_a_few_word">Describe Resource in a few word</string>
+    <string name="character_max">150 Character Max</string>
+    <string name="my_children">My Kids</string>
+    <string name="my_children_new_line">My Kids</string>
+    <string name="find_course">Find Course</string>
+    <string name="find_trainer">Find Trainer</string>
+    <string name="favorites">Favorites</string>
+    <string name="settings">Settings</string>
+    <string name="search_by_course">Search by Course</string>
+    <string name="search_by_trainer">Search by Trainer</string>
+    <string name="my_children_profiles">My Kid Profiles</string>
+    <string name="add_children">Add Kid</string>
+    <string name="find_resource">Find Resource</string>
+    <string name="search_by_subject_key_word">Search by Subject, Key word</string>
+    <string name="my_favorites">My Favorites</string>
+    <string name="view_list">View List</string>
+
+
+    <string-array name="navigation_drawer_items_array">
+        <item>Connect</item>
+        <item>Fixtures</item>
+        <item>Table</item>
+    </string-array>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBQm_PBeQl5oIaRlnOKYKLDATz-co1CyNw</string>
+    <string name="search_subject">Search Subject</string>
+    <string name="per_hr_price"><![CDATA[ <p>AED %1$s<small><font color="#B8B9B9"> - Per Hour</font></small></p> ]]></string>
+    <string name="tutoring_experience_with_tadreeb">Tutoring Experience with Tadreeb</string>
+    <string name="read_review">Read Review</string>
+    <string name="book">Book</string>
+    <string name="send_message">Send Message</string>
+    <string name="david_bowie_review">David Bowie Review</string>
+    <string name="david_bowie_book">Book David Bowie</string>
+    <string name="report_name"><![CDATA[ <p><b>%1$s</b><small><font color="#757575"> - %2$s</font></small></p> ]]></string>
+    <string name="how_do_you_want_the_meeting">How do you want the meeting?</string>
+    <string name="select_meeting_type">Select meeting type</string>
+    <string name="select_date_time">Select Date and Time<font fgcolor='#FF2727'>*</font></string>
+    <string name="time_slot">Time Slot</string>
+    <string name="select_kid">Select Kid</string>
+    <string name="for_which_kid_the_booking_is">For which kid the booking is?<font fgcolor='#FF2727'>*</font></string>
+    <string name="group_session">Group Session</string>
+    <string name="type_number">Type Number</string>
+    <string name="submit">Submit</string>
+    <string name="date_calender">Date Calender</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_time">Select Time</string>
+    <string name="select_preferred_date">Select Date</string>
+    <string name="continue_txt">Continue</string>
+    <string name="booking_address">Booking Address</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="online_payment">Online Payment</string>
+    <string name="cash_on_delivery">Cash on Delivery</string>
+    <string name="pay">Pay</string>
+    <string name="thank_you">Thank You</string>
+    <string name="you_have_successfully_booked">You have Successfully booked</string>
+    <string name="invoice_number">Invoice Number:\n <b><font size='18'>%1$s</font></b></string>
+    <string name="back_to_home_page">Back to Home Page</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="call_us">Call Us</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="details">Details</string>
+    <string name="session_details">Session Details</string>
+    <string name="summary">Summary</string>
+    <string name="sub_total">Sub Total</string>
+    <string name="order_total">Order Total</string>
+    <string name="book_now">Book Now</string>
+    <string name="parent_details">Parent Details</string>
+    <string name="phone_number">Phone Number <font fgcolor='#FF2727'>*</font></string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="change_password">Change Password <font fgcolor='#FF2727'>*</font></string>
+    <string name="enter_password">Enter Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="logout">Logout</string>
+    <string name="report_card">Report Card</string>
+    <string name="report_card_new_line">Report\nCard</string>
+    <string name="profile_settings">Profile Settings</string>
+    <string name="new_user_registration">New User? <b>Register</b></string>
+    <string name="sign_out_prompt">Are you sure want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="add">Add</string>
+    <string name="select_user_type">Select User Type For %1$s</string>
+    <string name="loading">Loading..</string>
+    <string name="enter_first_name">Enter First Name</string>
+    <string name="enter_last_name">Enter Last Name</string>
+    <string name="enter_your_password">Enter your Password</string>
+    <string name="not_match_password">Password don\'t match</string>
+    <string name="student_details">Student Details</string>
+    <string name="student_profile">Student Profile</string>
+
+    <string name="take_photo">Take From Camera</string>
+    <string name="choose_image">Select Image</string>
+    <string name="from_gallery">From Gallery</string>
+    <string name="upload_your_children_picture">Upload Your Kid Picture</string>
+    <string name="language">Language</string>
+    <string name="search_by_address">Search address</string>
+    <string name="location_select_mez">Location Select</string>
+    <string name="wrong_address">Wrong Address</string>
+    <string name="lat_lng_not_found">Not found</string>
+    <string name="location">Location</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="enter_your_dob">Enter Your Date of birth</string>
+    <string name="nationality">Nationality</string>
+    <string name="user_name">Username</string>
+    <string name="user_name_star">Username <font fgcolor='#FF2727'>*</font></string>
+    <string name="type_user_name">Type username</string>
+    <string name="exit_app_prompt">Are you sure you want to close?</string>
+    <string name="delete_data">Are you sure you want to delete this?</string>
+    <string name="enter_subject_details">Enter Subject Details</string>
+    <string name="select_subject">Select Subject</string>
+    <string name="enter_ammount_per_hour">Enter Ammount / hour</string>
+    <string name="done">Done</string>
+    <string name="update">Update</string>
+    <string name="video">Video</string>
+    <string name="image">Image</string>
+    <string name="update_live_course">Update Live Course</string>
+    <string name="update_video_course">Update Video Course</string>
+    <string name="type_your_message">Type your message..</string>
+    <string name="upload_file">Upload File</string>
+    <string name="browse_file">Browse File</string>
+    <string name="upload_course_video">Upload Course Video</string>
+    <string name="select_video">Select Video</string>
+    <string name="online_arg_class">Online %1$s Class</string>
+    <string name="education">Education</string>
+    <string name="training">Training</string>
+    <string name="source_by_teacher">Source by %1$s</string>
+    <string name="this_course_includes">This Course Includes</string>
+    <string name="you_can_join_from">You can join From</string>
+    <string name="zoom_meeting">Zoom Meeting</string>
+    <string name="view_in_map">View in Map</string>
+    <string name="back_to_timeline">Back to Timeline</string>
+    <string name="select_loaction">Select Loaction</string>
+    <string name="teacher_profile">Teacher Profile</string>
+    <string name="schedule">Schedule</string>
+    <string name="payment_summary">Payment Summary</string>
+    <string name="my_resources">My Resources</string>
+    <string name="change_language">Change Language</string>
+    <string name="english">English</string>
+    <string name="arabic">Arabic</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="are_you_above_eighteen">Are you above 18?</string>
+    <string name="change_user">Change User</string>
+    <string name="all_resource">All Resource</string>
+    <string name="email">Email</string>
+    <string name="email_star">Email <font fgcolor='#FF2727'>*</font></string>
+    <string name="enter_email">Enter your email</string>
+    <string name="user_name_or_mail_phone">Username / Email / Phone Number</string>
+    <string name="mobile_login">Username or Email or Phone Number for login</string>
+    <string name="enter_bank_name">Enter Bank Name</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="enter_iban_number">Enter IBAN Number</string>
+    <string name="iban_number">IBAN Number</string>
+    <string name="add_date">Add Date</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="upload_resource_image">Resource Image</string>
+    <string name="online">If Online</string>
+    <string name="go">Go</string>
+    <string name="select_cetogory_list">Select Cetogory</string>
+    <string name="cetegory">Cetegory</string>
+    <string name="sub_category">Sub Category</string>
+    <string name="map_view">Map View</string>
+    <string name="fileters">Filters</string>
+    <string name="clear_all">Clear All</string>
+    <string name="apply_filter">Apply Filter</string>
+    <string name="view_details" tools:ignore="MissingTranslation">View Details</string>
+    <string name="my_video" tools:ignore="MissingTranslation">My Video</string>
+    <string name="top_category" tools:ignore="MissingTranslation">Top Category</string>
+    <string name="top_course_in_it_n_software" tools:ignore="MissingTranslation">Top course in IT and Software</string>
+    <string name="select_sub_subject" tools:ignore="MissingTranslation">Select Sub Subject</string>
+    <string name="video_list">My Video Course List</string>
+    <string name="profile_details">Profile Details</string>
+
+</resources>

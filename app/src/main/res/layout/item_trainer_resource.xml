@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ryx.tdreeb.ui.fragments.trainerfragment.myresources.ResourceTrainerItemViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/white_bg_with_border">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/course_image"
+            imageUrl=""
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            image_chng_two="@{viewModel.image}"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/spain_flag"
+            app:civ_border_color="@color/border_color_of_toolbar_image"
+            app:civ_border_width="@dimen/_3sdp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/tv_course_hour"
+            android:layout_toEndOf="@+id/course_image"
+            android:text="@{viewModel.title}"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tv_sources"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_alignEnd="@+id/tv_name"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_toEndOf="@+id/course_image"
+            android:text="@{viewModel.resourceBY}"
+            android:textAllCaps="false"
+            android:textColor="@color/textcolor_upcoming_session_subject"
+            android:textSize="@dimen/_9ssp"/>
+
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="@dimen/_7sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_below="@+id/tv_sources"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_toEndOf="@+id/course_image"
+            android:src="@drawable/location" />
+
+        <TextView
+            android:id="@+id/tv_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_sources"
+            android:layout_alignEnd="@+id/tv_sources"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_toEndOf="@+id/iv_location"
+            android:text="@{viewModel.location}"
+            android:textAllCaps="false"
+            android:textColor="@color/textcolor_upcoming_session_subject"
+            android:textSize="@dimen/_9ssp" />
+
+        <TextView
+            android:id="@+id/tv_course_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_name"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@{viewModel.price}"
+            android:textAllCaps="false"
+            android:textColor="@color/splash"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="normal" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:onClick="@{()-> viewModel.onClickDelete()}"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/delete" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_edit"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:onClick="@{()-> viewModel.onClickEdit()}"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_toStartOf="@+id/iv_delete"
+            android:src="@drawable/edit" />
+
+    </RelativeLayout>
+
+</layout>
